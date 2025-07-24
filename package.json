@@ -17,6 +17,7 @@
     "watch-js": "nodemon --watch 'src/js/*.js' -e js --exec 'npm run ujs'",
     "watch-images": "nodemon --watch src/img -e png,jpg,jpeg,gif,svg,webp --exec 'npm run imagemin'",
     "watch": "npm-run-all --parallel watch-css watch-images watch-js watch-ejs",
+    "watch_1":"npm-run-all --parallel watch-css_1 watch-images watch-js watch-ejs_1",
     "start": "npm-run-all --parallel serve-wp watch-css watch-images watch-js watch-ejs"
   },
   "repository": {
