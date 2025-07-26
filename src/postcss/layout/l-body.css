@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-section {
+/* section {
     width: 100vw;
     height: 100vh;
     padding: 65px;
     position: relative;
-}
+} */
 
 h1 {
     position: relative;
@@ -16,67 +16,39 @@ h1 {
     font-size: 50px;
 }
 
-.header {
+body {
     width: 100%;
-    height: 102px;
+    height: 100%;
+    position: fixed;
+    /* background-image: url("/assets/img/open.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+}
+
+/* #loadingOverlay {
+    position: fixed;
     top: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    /* 横幅って基本100%にしたほうがいいのかな*/
-}
-
-.header__body {
+    left: 0;
     width: 100%;
     height: 100%;
-    max-width: 1440px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    &--title {
-
-        width: 20%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-    }
-}
-
-.header__body--title {
-    width: 20%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+    z-index: 99999;
+  } */
 
-.header__body--nav {
-    width: 80%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
+  /* #loadingOverlay img {
+    width: 200px; 
+  } */
 
-.header__body--items {
+.main {
     width: 100%;
     height: 100%;
-    margin: 0 20%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header__body--item {
-    margin: 0;
 }
 
 /* Projectsection */
-.Project {
+/* .Project {
     width: 100%;
     height: 100%;
     display: flex;
@@ -143,11 +115,11 @@ h1 {
 img .img1 {
     width: 770;
     height: 829;
-}
+} */
 
 /* About */
 
-.About__head {
+/* .About__head {
     width: 100%;
     height: 100%;
     padding: 5%;
@@ -200,12 +172,12 @@ img .img1 {
     justify-content: center;
     align-items: center;
     background-color: white;
-}
+} */
 
 /* MainFocus/MissionStatement */
-Main .Main {
+/* .main {
     width: 100%;
-    height: 50%;
+    height: 100vh;
 }
 
 .Main__head {
@@ -267,17 +239,17 @@ Main .Main {
     position: relative;
     align-items: center;
     justify-content: center;
-}
+} */
 
-.OurProject {
+/* .OurProject {
     position: relative;
     width: 1170px;
     height: 765px;
-    margin: 0 auto; /* 左右のマージンを自動にして中央配置 */
+    margin: 0 auto; 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* 上から配置開始 */
-    align-items: flex-start; /* 左寄せ配置 */
+    justify-content: flex-start; 
+    align-items: flex-start; 
     gap: 2rem;
 }
 
@@ -327,35 +299,34 @@ Main .Main {
     position: relative;
     top: 0;
     left: 0;
-    /* width: 100%;
-    height: 100%; */
+    
     object-fit: cover;
 }
 
 /* 2番目の画像を少しずらして重ねる */
-.img5Set img:nth-child(2) {
+/* .img5Set img:nth-child(2) {
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0.8;
-}
+} */
 
 /* OurProject__body--items_footのスタイル */
-.OurProject__body--items_foot {
+/* .OurProject__body--items_foot {
     position: relative;
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between; /* 画像を均等に配置 */
+    justify-content: space-between; 
     align-items: center;
-    gap: 1rem; /* 画像間の間隔 */
+    gap: 1rem; 
 }
 
 .OurProject__body--items_foot img {
-    flex: 1; /* 画像を均等に配置 */
-    max-width: calc(33.333% - 0.67rem); /* 3つの画像を均等に配置（間隔を考慮） */
-    height: 200px; /* 高さを固定 */
-    object-fit: cover; /* 画像をカバーして高さを揃える */
+    flex: 1; 
+    max-width: calc(33.333% - 0.67rem); 
+    height: 200px; 
+    object-fit: cover; 
 }
 
 .OurProject__foot {
@@ -374,7 +345,7 @@ Main .Main {
     height: 71px;
     color: white;
     background-color: rgb(51, 51, 51);
-}
+} */
 
 /* Contact フォームのスタイル */
 /* .Contact__body--form input {
@@ -394,7 +365,7 @@ Main .Main {
 } */
 
 
-.Contact {
+/* .Contact {
     position: relative;
     width: 100%;
     height: 100%;
@@ -434,7 +405,7 @@ Main .Main {
     width: 391px;
     height: 46px;
     background-color: rgb(240, 240, 240);
-    border: none; /* ← これを追加！ */
+    border: none; 
     margin-bottom: 12px;
 }
 
@@ -467,39 +438,8 @@ Main .Main {
     height: 71px;
     color: white;
     background-color: rgb(51, 51, 51);
-}
+}  */
 
-.footer {
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: 417px;
-    color: white;
-    background-color: rgb(51, 51, 51);
-}
-
-.container {
-    position: relative;
-    margin: 66px auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 80%;
-    height: 100%
-}
-
-.footer__head {
-    width: 145px;
-    height: 94px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer__head h6 {
-    width: 94px;
-}
 
 
 

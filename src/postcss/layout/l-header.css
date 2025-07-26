@@ -5,8 +5,13 @@
     padding: 0;
     display: flex;
     align-items: center;
+    z-index: 10000;
     /* 横幅って基本100%にしたほうがいいのかな*/
     position: fixed;
+}
+
+.header img {
+    height: 70px;
 }
 
 .header__body {
@@ -55,5 +60,18 @@
 }
 
 .header__body--item {
+    
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     margin: 0;
+    transition: transform 0.5s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.header__body--item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
