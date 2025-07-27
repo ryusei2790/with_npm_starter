@@ -1,9 +1,17 @@
+
 <footer class="footer">
     <div class="container">
     <div class="footer__head">
         <img src="/assets/img/logo.png" />
+        <!-- <h6>
+            DIGITAL PROJECT
+        </h6> -->
     </div>
     <div class="footer__information">
+        <!-- <h3>
+            information
+        </h3> -->
+        <!-- ここってdivで括ったほうがいいのかな？ -->
          <ul>
                 <li class="header__body--item"><a href="selectLanch.html">selectLanch</a></li>
                 <li class="header__body--item"><a href="searchLanch.html">serchLanch</a></li>
@@ -15,7 +23,18 @@
 
     </div>
     <div class="footer__foot">
+        <!-- <h3>
+            Social Media
+        </h3> -->
+        <!-- 機械的にはnavとかで明示するといい -->
         <nav>
+            <!-- <ul class="SocialLogo">
+                <li>facebook</li>
+                <li>tweeter</li>
+                <li>instagram</li>
+                <li>pinterest</li>
+            </ul> -->
+            <!-- <img src="/assets/img/footer_logo.png"/> -->
         </nav>
         &copy; 2025 selectLanch
     </div>
