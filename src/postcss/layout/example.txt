@@ -1,0 +1,397 @@
+/* Projectsection */
+/* .Project {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Project__head {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Project__head--title {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Project__head--title span {
+    font-weight: 700;
+    color: black;
+}
+
+.Project__head--body {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    top: 80px;
+    left: 25%;
+    display: flex;
+    flex-direction: row;
+    gap: 7%;
+}
+
+.Project__head--body_item {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ccc;
+    border-radius: 10%;
+    padding: 4px 8px;
+}
+
+.Project__head--body_foot {
+    position: relative;
+    width: 50%;
+    top: 180px;
+    left: 25%;
+    display: flex;
+    flex-direction: space-between;
+    gap: 1rem;
+    color: grey;
+}
+
+.Project__body {
+    width: 65%;
+    height: 100%;
+}
+
+img .img1 {
+    width: 770;
+    height: 829;
+} */
+
+/* About */
+
+/* .About__head {
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+    background-color: rgb(239, 239, 239);
+}
+
+.About__head--items {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.About__head--items_head {
+    position: relative;
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.About__head--items_body {
+    position: relative;
+    height: 100%;
+    width: 30%;
+    top: 60%;
+    transform: translateY(-50%);
+}
+
+.About__head--description {
+    position: relative;
+    width: 40%;
+    height: 100%;
+}
+
+
+.About__head--description description {
+    position: relative;
+}
+
+.About__head--other {
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+} */
+
+/* MainFocus/MissionStatement */
+/* .main {
+    width: 100%;
+    height: 100vh;
+}
+
+.Main__head {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.Main__body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+.Main__body--item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction:row;
+    gap: 10%;
+    padding: 0;
+}
+ 
+.Main__body--item_1 {
+    position: relative;
+    width: 50%;
+    height: 300px;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.Main__body--item_2 {
+    position: relative;
+    width: 50%;
+    height: 300px;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.Main__body--item h1  { 
+    position: relative;
+    top: 0;
+    height:100%;
+    font-size: 300px;
+    color: #eeeeee;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.Main__body--item .description {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+} */
+
+/* .OurProject {
+    position: relative;
+    width: 1170px;
+    height: 765px;
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    gap: 2rem;
+}
+
+.OurProject__head {
+    position: relative;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.OurProject__body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.OurProject__body--items {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.OurProject__body--items_head {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.OurProject__body--items_head img {
+    width: 100%;
+    height: 100%;
+}
+
+.img5Set {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.img5Set img {
+    position: relative;
+    top: 0;
+    left: 0;
+    
+    object-fit: cover;
+}
+
+/* 2番目の画像を少しずらして重ねる */
+/* .img5Set img:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+} */
+
+/* OurProject__body--items_footのスタイル */
+/* .OurProject__body--items_foot {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
+    gap: 1rem; 
+}
+
+.OurProject__body--items_foot img {
+    flex: 1; 
+    max-width: calc(33.333% - 0.67rem); 
+    height: 200px; 
+    object-fit: cover; 
+}
+
+.OurProject__foot {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.OurProject__foot button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 221px;
+    height: 71px;
+    color: white;
+    background-color: rgb(51, 51, 51);
+} */
+
+/* Contact フォームのスタイル */
+/* .Contact__body--form input {
+    width: 100%;
+    height: 50px; 
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+.Contact__body--form input[name="Message"] {
+    height: 100px; 
+    resize: vertical; 
+} */
+
+
+/* .Contact {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.Contact .container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.Contact__body {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.Contact__body--form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 391px;
+    height: 46px;
+}
+
+.Contact__body--form input {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 391px;
+    height: 46px;
+    background-color: rgb(240, 240, 240);
+    border: none; 
+    margin-bottom: 12px;
+}
+
+.Contact__body--form input[name="Message"] {
+    height: 147px;
+}
+
+.Contact__body--img {
+    position: relative;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    width: 100%;
+}
+
+
+.Contact__foot {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.Contact__foot button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 221px;
+    height: 71px;
+    color: white;
+    background-color: rgb(51, 51, 51);
+}  */
+
+
+
+
+
