@@ -1,11 +1,17 @@
 require('dotenv').config();
 const express = require('express');
-const fetch = require('node-fetch');
 const cors = require('cors');
 const app = express();
 
+const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
+
 app.use(cors());
 app.use(express.json());
+
+app.get('/', (req, res) => {
+    res.send('✅ Dify中継サーバー起動中です');
+  });
+  
 
 app.post('/send-to-dify', async (req, res) => {
   try {
@@ -17,11 +23,19 @@ app.post('/send-to-dify', async (req, res) => {
       },
       body: JSON.stringify(req.body)
     });
+    console.log("送信しました");
+
 
     const data = await response.json();
     res.json(data);
   } catch (err) {
     console.error("バックエンドでのエラー:", err);
+
+    if (err.response) {
+        const errorText = await err.response.text();
+        console.error("Difyからの応答エラー", errorText);
+    }
+
     res.status(500).json({ error: 'Dify送信失敗', details: err.message });
   }
 });

@@ -23,8 +23,9 @@ function sendToDify(selections) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
-    },body: JSON.stringify({
-      input: {
+    },
+    body: JSON.stringify({
+      inputs: {
         country: selections.selectedCountry,
         main: selections.selectedMain,
         dish: selections.selectedMainDish
@@ -36,12 +37,22 @@ function sendToDify(selections) {
     if (!response.ok) throw new Error("Dify送信に失敗しました。");
     return response.json();
   }).then(data => {
-    console.log("Dify送信に成功", data);
-    const aiReply = data.answer;
+    const aiReply = data.data.outputs.result;
     console.log("Difyの返答", aiReply);
 
     const resultBox = document.getElementById("resultBox");
-    resultBox.innerHTML += `<br><br>🤖 AIの提案：<br>${aiReply}`;
+
+    const aiSection = document.createElement("div");
+    aiSection.classList.add("ai-reply");
+    aiSection.innerHTML = `
+    <br>
+    <div style="padding: 1em; margin-top: 1em; background: #f3faff; border-left: 5px solid #2196f3;">
+      🤖 <strong>AIの提案</strong><br>
+      ${aiReply}
+    </div>
+    `;
+
+    resultBox.appendChild(aiSection);
   })
   .catch(error => {
     console.error("エラー", error);
