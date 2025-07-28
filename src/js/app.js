@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
           resultBox.innerHTML = resultText;
           resultBox.classList.add("show");
 
-          sendToDify(finalSelections);
+          
 
           setTimeout(() => {
             resultBox.classList.remove("show");
@@ -129,10 +129,23 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("selectedMainDish").textContent = "";
     }
 
+    document.getElementById("askAIButton").addEventListener("click", function () {
+      const values = Object.values(finalSelections);
+      const allSelected = values.every(value => value !== null);
+    
+      if (allSelected) {
+        sendToDify(finalSelections);
+      } else {
+        alert("全ての項目を選んでからAIに聞いて下さい");
+      }
+    });
+
     setupRandomSelector("selectCountryButton", "selectedCountry", ["中華", "イタリアン", "和食", "アメリカ"], "selectedCountry");
     setupRandomSelector("selectMainButton", "selectedMain", ["白米", "和めん", "パスタ", "ぱん"], "selectedMain");
     setupRandomSelector("selectMainDishButton", "selectedMainDish", ["鶏肉", "牛肉", "豚肉", "魚", "魚介（魚以外"], "selectedMainDish");
 })
+
+
 
 
 
