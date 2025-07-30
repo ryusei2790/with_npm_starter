@@ -5,7 +5,8 @@
     "main": "server.js",
     "type": "commonjs",
     "scripts": {
-      "start": "node server.js"
+      "start": "node server.js",
+      "build": "echo 'No build needed for this Node.js project.'"
     },
     "dependencies": {
       "cors": "^2.8.5",
