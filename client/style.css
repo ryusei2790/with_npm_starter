@@ -355,6 +355,33 @@ h1 {
     font-weight: 100;
     font-size: 50px;
 }
+/* スマホ対応（最大600px） */
+@media (max-width: 600px) {
+    section {
+      padding: 40px 20px; /* 左右の余白を増やす */
+      min-height: auto; /* 必要に応じて高さ制限解除 */
+    }
+  
+    h1 {
+      font-size: 28px; /* 小さめに調整 */
+      line-height: 1.3;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+}
+/* タブレット対応（601px〜1024px） */
+@media (min-width: 601px) and (max-width: 1024px) {
+    section {
+      padding: 60px 30px;
+    }
+  
+    h1 {
+      font-size: 40px;
+      line-height: 1.3;
+      text-align: center;
+      margin-bottom: 18px;
+    }
+}
 /* #loadingOverlay {
     position: fixed;
     top: 0;
@@ -398,6 +425,44 @@ h1 {
 .footer__head h6 {
     width: 94px;
 }
+/* レスポンシブ対応 */
+@media screen and (max-width: 768px) {
+    .footer {
+      height: auto; /* 高さ固定を解除 */
+      padding: 40px 20px; /* パディングで余白を確保 */
+    }
+  
+    .container {
+      width: 90%;
+      flex-direction: column;
+      align-items: center;
+      margin: 30px auto;
+      height: auto;
+    }
+  
+    .footer__head {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  
+    .footer__head h6 {
+      width: 100%;
+      text-align: center;
+    }
+  }
+/* さらに狭いスマホ画面向け */
+@media screen and (max-width: 480px) {
+    .container {
+      width: 95%;
+      margin: 20px auto;
+    }
+  
+    .footer__head {
+      max-width: 100%;
+    }
+  }
 .header {
     width: 100%;
     height: 102px;
@@ -468,6 +533,58 @@ h1 {
     transform: translateY(-3px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
+/* --- レスポンシブ対応 --- */
+@media screen and (max-width: 1024px) {
+    .header {
+      height: auto;
+      padding: 10px 15px;
+    }
+  
+    .header__body {
+      flex-direction: column;
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .header__body--title {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .header__body--nav {
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .header__body--items {
+      margin: 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .header__body--item {
+      padding: 10px 15px;
+      margin: 5px;
+      font-size: 14px;
+    }
+  }
+@media screen and (max-width: 600px) {
+    .header {
+      height: auto;
+      padding: 10px;
+    }
+  
+    .header__body--items {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .header__body--item {
+      width: 100%;
+      max-width: 300px;
+      text-align: center;
+    }
+  }
 button {
     padding: 12px 24px;
     font-size: 16px;

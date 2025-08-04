@@ -36,6 +36,35 @@ h1 {
     font-size: 50px;
 }
 
+/* スマホ対応（最大600px） */
+@media (max-width: 600px) {
+    section {
+      padding: 40px 20px; /* 左右の余白を増やす */
+      min-height: auto; /* 必要に応じて高さ制限解除 */
+    }
+  
+    h1 {
+      font-size: 28px; /* 小さめに調整 */
+      line-height: 1.3;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+}
+
+/* タブレット対応（601px〜1024px） */
+@media (min-width: 601px) and (max-width: 1024px) {
+    section {
+      padding: 60px 30px;
+    }
+  
+    h1 {
+      font-size: 40px;
+      line-height: 1.3;
+      text-align: center;
+      margin-bottom: 18px;
+    }
+}
+
 /* #loadingOverlay {
     position: fixed;
     top: 0;

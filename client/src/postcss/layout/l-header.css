@@ -75,3 +75,57 @@
     transform: translateY(-3px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
+
+/* --- レスポンシブ対応 --- */
+@media screen and (max-width: 1024px) {
+    .header {
+      height: auto;
+      padding: 10px 15px;
+    }
+  
+    .header__body {
+      flex-direction: column;
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .header__body--title {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .header__body--nav {
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .header__body--items {
+      margin: 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .header__body--item {
+      padding: 10px 15px;
+      margin: 5px;
+      font-size: 14px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .header {
+      height: auto;
+      padding: 10px;
+    }
+  
+    .header__body--items {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .header__body--item {
+      width: 100%;
+      max-width: 300px;
+      text-align: center;
+    }
+  }
