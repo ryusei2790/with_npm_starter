@@ -40,19 +40,33 @@ function sendToDify(selections) {
     const aiReply = data.data.outputs.result;
     console.log("Difyの返答", aiReply);
 
+    const encoded = encodeURIComponent(aiReply);
+    const resultUrl = `/result.html?ai=${encoded}`;
+
+   
+
     const resultBox = document.getElementById("resultBox");
-
-    const aiSection = document.createElement("div");
-    aiSection.classList.add("ai-reply");
-    aiSection.innerHTML = `
-    <br>
-    <div style="padding: 1em; margin-top: 1em; background: #f3faff; border-left: 5px solid #2196f3;">
-      🤖 <strong>AIの提案</strong><br>
-      ${aiReply}
-    </div>
+    resultBox.innerHTML = `
+    v<br>
+    <a href="${resultUrl}" target="_blank" style="color: #2196f3; font-weight: bold;">
+      🤖 AIの提案を別ページで見る
+    </a>
     `;
+  
 
-    resultBox.appendChild(aiSection);
+    // const resultBox = document.getElementById("resultBox");
+
+    // const aiSection = document.createElement("div");
+    // aiSection.classList.add("ai-reply");
+    // aiSection.innerHTML = `
+    // <br>
+    // <div style="padding: 1em; margin-top: 1em; background: #f3faff; border-left: 5px solid #2196f3;">
+    //   🤖 <strong>AIの提案</strong><br>
+    //   ${aiReply}
+    // </div>
+    // `;
+
+    // resultBox.appendChild(aiSection);
   })
   .catch(error => {
     console.error("エラー", error);
@@ -100,11 +114,21 @@ document.addEventListener('DOMContentLoaded', function() {
         const resultText = `今日のご飯は…<br>
           🍽️ <strong>ジャンル：</strong>${finalSelections.selectedCountry}<br>
           🍞 <strong>主食：</strong>${finalSelections.selectedMain}<br>
-          🍖 <strong>メイン：</strong>${finalSelections.selectedMainDish}`;
+          🍖 <strong>メイン：</strong>${finalSelections.selectedMainDish}<br>
+          <button id="askAIButton">AIにレシピ聞く</button>`;
 
           const resultBox = document.getElementById("resultBox");
           resultBox.innerHTML = resultText;
           resultBox.classList.add("show");
+
+          const askAIButton = document.getElementById("askAIButton");
+      askAIButton.addEventListener("click", () => {
+
+        const message = `${finalSelections.selectedCountry}の料理で、主食は${finalSelections.selectedMain}、メインは${finalSelections.selectedMainDish}のレシピを教えて`;
+        sendToDify(finalSelections);
+        // AIとの連携処理などをここに記述（例: fetchでAPI呼び出し）
+        alert("AIにレシピを聞いています。:\n\n" + message);
+      });
 
           
 
